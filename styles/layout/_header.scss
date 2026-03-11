@@ -1,0 +1,165 @@
+header {
+
+  nav {
+
+    ul {
+
+      li {
+
+        a {
+          color: black;
+
+          &:hover {
+            color: pink;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.header {
+  background-color: #fdfcfa;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  position: relative;
+}
+
+/* INPUT OCULTO */
+
+#menu-toggle {
+  display: none;
+}
+
+/* HAMBURGUESA IZQUIERDA */
+
+.hamburguesa {
+  display: block;
+  font-size: 1.8rem;
+  cursor: pointer;
+  background-color: #a47148;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 30px;
+}
+
+/* LOGO SIEMPRE A LA DERECHA */
+
+.logo {
+  margin-left: auto;
+}
+
+.logo img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+
+/* NAV FUERA DEL FLUJO */
+
+.nav {
+  position: absolute;
+  top: 100%;
+  left: 20px;
+}
+
+/* MENU DESPLEGABLE */
+
+.nav-lista {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #fdfcfa;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.nav-lista {
+
+  a {
+    text-decoration: none;
+    color: $color-texto;
+
+    &:hover {
+      color: $color-principal;
+    }
+
+  }
+
+}
+
+/* ACTIVACIÓN */
+
+#menu-toggle:checked ~ .nav .nav-lista {
+  display: flex;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  @include flex-center;
+}
+
+.hero-texto h1 {
+  font-size: 3rem;
+}
+
+.hero-texto h2 {
+  font-weight: normal;
+  color: #7a5c52;
+}
+
+.hero-imagen img {
+  max-width: 380px;
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .nav-lista {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background: #fdfcfa;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  #menu-toggle:checked ~ .nav .nav-lista {
+    display: flex;
+  }
+
+  .hamburguesa {
+    display: block;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-texto h1 {
+    font-size: 2.2rem;
+  }
+}
