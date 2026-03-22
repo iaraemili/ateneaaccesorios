@@ -1,6 +1,4 @@
-// Combined main.js: mobile nav helpers
 document.addEventListener('DOMContentLoaded', function () {
-  // Close mobile hamburger menu when a nav link is clicked
   const navToggle = document.getElementById('nav-toggle');
   const navLinks = document.querySelectorAll('.site-nav .nav-list a');
   if (navToggle) {
@@ -12,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// Close mobile nav when clicking outside (optional enhancement)
 document.addEventListener('click', function(e){
   const toggle = document.getElementById('nav-toggle');
   if(!toggle) return;
@@ -22,9 +19,8 @@ document.addEventListener('click', function(e){
     toggle.checked = false;
   }
 });
-// Small JS helpers
+
 document.addEventListener('click', function(e){
-  // close mobile nav if click outside (optional enhancement)
   const toggle = document.getElementById('nav-toggle');
   if(!toggle) return;
   const nav = document.querySelector('.site-nav');
