@@ -357,6 +357,22 @@ button:hover {
 }
 
 /* MOBILE FIRST */
+@media (max-width: 900px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contacto-contenido {
+    grid-template-columns: 1fr;
+  }
+
+  .fila {
+    flex-direction: column;
+  }
+
+}
 .container-productos {
   display: grid;
   grid-template-columns: 1fr;
@@ -364,11 +380,15 @@ button:hover {
 }
 
 /* TABLET */
-@media (min-width: 768px) {
-  .container-productos {
-    grid-template-columns: repeat(2, 1fr);
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
+
 }
+
 /* DESKTOP */
 @media (min-width: 1024px) {
   .container-productos {
