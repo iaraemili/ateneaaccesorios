@@ -376,4 +376,32 @@ button:hover {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+/* NAV VISIBLE ON DESKTOP */
+@media (min-width: 901px) {
+  .nav {
+    position: static;
+    top: auto;
+    left: auto;
+  }
+  .nav-lista {
+    display: none;
+    flex-direction: row;
+    gap: 30px;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    align-items: center;
+  }
+  .nav-lista a {
+    padding: 8px 0;
+    color: #5a3e36;
+  }
+  .hamburguesa {
+    display: none;
+  }
+  #menu-toggle:checked ~ .nav-lista {
+    display: flex;
+  }
+}
+
