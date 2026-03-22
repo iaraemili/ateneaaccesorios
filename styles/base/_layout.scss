@@ -1,0 +1,8 @@
+/* Layout utilities */
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center}
+@include respond-to(md){.hero{grid-template-columns:1fr 1fr}}
+.services-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@include respond-to(md){.services-grid{grid-template-columns:repeat(3,1fr)}}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px}
+@include respond-to(md){.gallery-grid{grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}}

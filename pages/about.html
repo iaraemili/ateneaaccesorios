@@ -1,118 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre la marca | Atenea Joyería</title>
-  <link rel="stylesheet" href="../styles/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sobre — Atenea Studio</title>
+  <meta name="description" content="Sobre Atenea Studio: emprendimiento de joyas y accesorios, misión y equipo">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/styles.css">
 </head>
-
 <body>
-<header class="header">
-  <div class="container header-contenido">
-
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="hamburguesa">☰</label>
-
-    <div class="logo">
-      <img src="../assets/logo-atenea.png" alt="Logo de Atenea Accesorios">
+  <header class="site-header bg-light" role="banner">
+    <div class="container header-contenido d-flex align-items-center justify-content-between">
+      <input id="nav-toggle" type="checkbox" class="d-none" aria-hidden="true">
+      <label for="nav-toggle" class="hamburger d-lg-none">☰</label>
+      <div class="logo"><a href="../index.html"><img src="../assets/logo-atenea.png" alt="Atenea logo" width="140"></a></div>
+      <nav class="site-nav" role="navigation" aria-label="Principal">
+        <ul class="nav-list d-lg-flex list-unstyled mb-0">
+          <li class="mx-2"><a href="../index.html">Inicio</a></li>
+          <li class="mx-2"><a href="../pages/about.html">Sobre</a></li>
+          <li class="mx-2"><a href="../pages/products.html">Productos</a></li>
+          <li class="mx-2"><a href="../pages/gallery.html">Galería</a></li>
+          <li class="mx-2"><a href="../pages/contact.html">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <nav class="nav">
-      <ul class="nav-lista">
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="../pages/products.html">Productos</a></li>
-        <li><a href="../pages/gallery.html">Galería</a></li>
-        <li><a href="../pages/about.html">Sobre la marca</a></li>
-        <li><a href="../pages/contact.html">Contacto</a></li>
-      </ul>
-    </nav>
+  <main class="container mt-5">
+    <h1>Sobre Atenea Studio</h1>
+    <p>Atenea Studio es un emprendimiento de joyas y accesorios artesanales. Diseñamos y producimos piezas únicas pensadas para complementar tu estilo con materiales de calidad y procesos responsables.</p>
 
-  </div>
-</header>
-
-<main class="container mt-5">
-
-  <section class="about">
-    <h1>Sobre Atenea</h1>
-
-    <p>
-      <strong>Atenea</strong> nace en 
-      <time datetime="2024">2024</time> 
-      como un emprendimiento de accesorios para mujer que celebra la fuerza,
-      la sensibilidad y la expresión personal.
-    </p>
-
-    <p>
-      Inspirada en la belleza cotidiana y en mujeres que eligen con intención,
-      Atenea combina diseño, materiales seleccionados y una mirada actual.
-    </p>
-
-    <p>
-      Es una invitación a expresarte, a jugar con los detalles
-      y a llevar aquello que realmente te representa.
-    </p>
-  </section>
-
-  <!-- FAQ CON ACORDEÓN BOOTSTRAP -->
-  <section class="mt-5">
-    <h2>Preguntas frecuentes</h2>
-
-    <div class="accordion mt-4" id="faqAtenea">
-
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-            ¿Hacen envíos a todo el país?
-          </button>
-        </h2>
-        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAtenea">
-          <div class="accordion-body">
-            Sí, realizamos envíos a todo el país mediante correo certificado.
-          </div>
+    <section class="team mt-4">
+      <h2>Nuestro equipo</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <article class="card p-3 text-center">
+            <img src="../assets/iara-gvozdenovich.png" alt="Iara Gvozdenovich" class="profile-img mb-2">
+            <h3>Iara Gvozdenovich</h3>
+            <p>Fundadora, operaciones y logística.</p>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="card p-3 text-center">
+            <img src="../assets/iara-emili.JPG" alt="Iara Emili" class="profile-img mb-2">
+            <h3>Iara Emili</h3>
+            <p>Dirección Creativa</p>
+          </article>
         </div>
       </div>
+    </section>
+  </main>
 
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-            ¿Se pueden hacer pedidos personalizados?
-          </button>
-        </h2>
-        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAtenea">
-          <div class="accordion-body">
-            Sí, trabajamos por encargo según disponibilidad de materiales y tiempos de producción.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-            ¿Qué materiales utilizan?
-          </button>
-        </h2>
-        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAtenea">
-          <div class="accordion-body">
-            Utilizamos acero quirúrgico, strass, piedras naturales y materiales seleccionados de alta calidad.
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer mt-5">
-  <div class="container text-center">
-    <p>© 2024 Atenea Joyería</p>
-  </div>
-</footer>
-
-<!-- BOOTSTRAP JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+  <footer class="site-footer bg-light mt-5 py-4"><div class="container">© 2024 Atenea Studio</div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

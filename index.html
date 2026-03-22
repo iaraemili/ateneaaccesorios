@@ -1,115 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio | Atenea Joyería</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atenea Joyeria — Joyería de alta calidad</title>
+  <meta name="description" content="Atenea Joyeria - Joyería artesanal de alta calidad. Piezas únicas y diseño innovador.">
+  <meta name="keywords" content="joyería, accesorios, joyas, artesanía, diseño">
+  <link rel="canonical" href="https://yourdomain.com/">
 
-  <link rel="stylesheet" href="styles/styles.css">
-
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+
+    <link rel="stylesheet" href="styles/styles.css">
 <body>
-  
-<header class="header">
-  <div class="container header-contenido">
 
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="hamburguesa">☰</label>
+  <header class="site-header bg-light" role="banner">
+    <div class="container header-contenido d-flex align-items-center justify-content-between">
 
-    <div class="logo">
-      <img src="assets/logo-atenea.png" alt="Logo de Atenea Accesorios">
-    </div>
+      <!-- Mobile toggle -->
+      <input id="nav-toggle" type="checkbox" class="d-none" aria-hidden="true">
+      <label for="nav-toggle" class="hamburger d-lg-none" aria-hidden="false" aria-label="Abrir menú">☰</label>
 
-    <nav class="nav">
-      <ul class="nav-lista">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="pages/products.html">Productos</a></li>
-        <li><a href="pages/gallery.html">Galería</a></li>
-        <li><a href="pages/about.html">Sobre la marca</a></li>
-        <li><a href="pages/contact.html">Contacto</a></li>
-      </ul>
-    </nav>
-
-  </div>
-</header>
-
-<main class="container">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-texto">
-      <h1>Atenea Accesorios</h1>
-      <h2>Joyas que se adaptan a tu estilo</h2>
-    </div>
-
-    <div class="hero-imagen">
-      <img src="assets/images/accesorios/combo-lovely-dorado.jpg" alt="Colección">
-    </div>
-  </section>
-
-  <!-- CARRUSEL BOOTSTRAP -->
-  <div id="carouselAtenea" class="carousel slide mt-5" data-bs-ride="carousel">
-    <div class="carousel-inner rounded-4 overflow-hidden">
-
-      <div class="carousel-item active">
-        <img src="assets/images/accesorios/anillo-aurora.jpg" class="d-block w-100" alt="Anillo Aurora">
+      <!-- Logo -->
+      <div class="logo" itemscope itemtype="http://schema.org/Organization">
+        <a href="index.html"><img src="assets/logo-atenea.png" alt="Atenea Studio logo" width="140"></a>
       </div>
 
-      <div class="carousel-item">
-        <img src="assets/images/accesorios/aros-gota.jpg" class="d-block w-100" alt="Aros Gota">
-      </div>
-
-      <div class="carousel-item">
-        <img src="assets/images/accesorios/trio-pulseras-strass.jpg" class="d-block w-100" alt="Pulseras Strass">
-      </div>
+      <!-- Navigation -->
+      <nav class="site-nav ms-3" role="navigation" aria-label="Principal">
+          <ul class="nav-list d-lg-flex list-unstyled align-items-center mb-0">
+            <li class="mx-2"><a href="index.html">Inicio</a></li>
+            <li class="mx-2"><a href="pages/about.html">Sobre</a></li>
+            <li class="mx-2"><a href="pages/products.html">Productos</a></li>
+            <li class="mx-2"><a href="pages/gallery.html">Galería</a></li>
+             <li class="mx-2"><a href="pages/contact.html">Contacto</a></li>
+          </ul>
+      </nav>
 
     </div>
+  </header>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselAtenea" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
+  <main class="site-main">
+    <!-- HERO + CTA -->
+    <section class="hero container mt-5" aria-labelledby="hero-heading">
+      <div class="hero-texto">
+        <h1 id="hero-heading">Accesorios con propósito</h1>
+        <p class="lead">Joyas que combinan estilo y significado</p>
+      </div>
+      <div class="hero-imagen">
+        <picture>
+          <source media="(min-width:1024px)" srcset="assets/accesorios/aros-minimal.jpg">
+          <source media="(min-width:768px)" srcset="assets/accesorios/aros-minimal.jpg">
+          <img src="assets/accesorios/aros-minimal.jpg" alt="Aros minimal" class="img-fluid rounded shadow-sm">
+        </picture>
+      </div>
+    </section>
 
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselAtenea" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-  </div>
+    <!-- Carousel (Bootstrap) -->
+    <section class="container mt-5" aria-label="Destacados">
+      <div id="carouselAtenea" class="carousel slide rounded-4 overflow-hidden" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/accesorios/aros-imperial.jpg" class="d-block mx-auto" alt="Aros Imperial">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/accesorios/aros-sydne.jpg" class="d-block mx-auto" alt="Aros Sydney">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/accesorios/aros-love.jpg" class="d-block mx-auto" alt="Aros Love">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselAtenea" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselAtenea" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
 
-  <!-- PRODUCTOS DESTACADOS -->
-  <section class="mt-5">
-    <h2>Colecciones destacadas</h2>
-
-    <div class="productos-grid">
-      <article class="card-producto">
-        <h3>Aros Gota Dorados</h3>
-        <img src="assets/images/accesorios/aros-gota.jpg" alt="Aros Gota Dorados">
-        <p>$25.000</p>
-      </article>
-
-      <article class="card-producto">
-        <h3>Trío de Pulseras Strass Doradas</h3>
-        <img src="assets/images/accesorios/trio-pulseras-strass.jpg" alt="Trío de Pulseras Strass Doradas">
-        <p>$18.000</p>
-      </article>
+    <!-- Services preview using CSS Grid -->
+    <section class="container mt-5">
+      <h2>Servicios</h2>
+      <div class="services-grid mt-3">
+        <article class="service card p-3">
+          <h3>Aros a medida</h3>
+          <p>Diseño completo del producto según gustos y presupuesto.</p>
+        </article>
+        <article class="service card p-3">
+          <h3>Collares personalizados</h3>
+          <p>Diseño completo del producto según gustos y presupuesto.</p>
+        </article>
+        <article class="service card p-3">
+          <h3>Pulseras solo para vos</h3>
+          <p>Diseño completo del producto según gustos y presupuesto.</p>
+        </article>
+      </div>
+    </section>
+  <!-- Footer -->
+  <footer class="site-footer bg-light mt-5 py-4" role="contentinfo">
+    <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center">
+      <p class="mb-2 mb-lg-0">© 2024 Atenea Studio — Todos los derechos reservados</p>
+      <nav aria-label="Footer">
+        <ul class="list-unstyled d-flex gap-3 mb-0">
+          <li><a href="privacy.html">Política de privacidad</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
-  </section>
+  </footer>
 
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <address>
-      Consultas:
-      <a href="mailto:iaragvozdenovich05@gmail.com">iaragvozdenovich05@gmail.com</a><br>
-      Tel:
-      <a href="tel:2474683894">2474683894</a>
-    </address>
-    <p>© 2024 Atenea Joyería</p>
-  </div>
-</footer>
-
-<!-- BOOTSTRAP JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

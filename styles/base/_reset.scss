@@ -1,47 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #e8ded8;
-  color: #5a3e36;
-  overflow-x: hidden;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin: 40px 0 20px;
-  text-align: left;
-}
-
-h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-
-h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-main {
-  padding-top: 40px;
-}
-
-p {
-  line-height: 1.6;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
+/* Minimal reset */
+* { box-sizing: border-box; }
+html,body{height:100%;}
+body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:$color-text;background:$color-bg}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}

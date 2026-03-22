@@ -1,6 +1,65 @@
+// Main SASS entry (styles.scss)
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "base/reset";
+@import "base/layout";
 @import "layout/header";
-@import "layout/footer";
 @import "components/buttons";
+
+/* Small customizations */
+.hero-texto h1{font-size:2rem;margin-bottom:8px}
+@media (min-width: $breakpoint-md){.hero-texto h1{font-size:2.6rem}}
+
+/* Gallery items */
+.gallery-item{display:block;width:100%;height:auto;border-radius:8px}
+
+/* Profile images on About page */
+.profile-img{width:140px;height:140px;object-fit:cover;border-radius:50%;display:inline-block}
+@media (max-width: 767px){.profile-img{width:110px;height:110px}}
+
+/* Navigation link hover (desktop and mobile) */
+.site-nav .nav-list a{color:#000000;transition:color .15s ease}
+.site-nav .nav-list a:hover,.site-nav .nav-list a:focus{color:#c2dc80;text-decoration:none}
+
+/* Carousel responsive sizing (portrait) */
+.carousel {
+	width: auto;
+	max-width: 480px; /* portrait column */
+	margin: 0 auto;
+}
+
+.carousel-inner {
+	height: min(80vh, 900px);
+}
+
+.carousel-item img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain; /* show full image */
+}
+
+@media (max-width: 1023px) {
+	.carousel {
+		max-width: 420px;
+	}
+	.carousel-inner {
+		height: min(60vh, 700px);
+	}
+}
+
+@media (max-width: 767px) {
+	.carousel {
+		max-width: 320px;
+	}
+	.carousel-inner {
+		height: min(50vh, 520px);
+	}
+}
+
+/* Footer */
+.site-footer{padding:20px 0;font-size:.95rem}

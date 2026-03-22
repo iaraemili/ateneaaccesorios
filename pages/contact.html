@@ -1,97 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto | Atenea Joyería</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto — Atenea Studio</title>
+  <meta name="description" content="Contacto Atenea Studio — solicita información y ubicaciones">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../styles/styles.css">
 </head>
-
 <body>
-
-<header class="header">
-  <div class="container header-contenido">
-
-    <!-- MENU HAMBURGUESA -->
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="hamburguesa">☰</label>
-
-    <!-- LOGO -->
-    <div class="logo">
-      <img src="../assets/logo-atenea.png" alt="Logo de Atenea Accesorios">
+  <header class="site-header bg-light">
+    <div class="container header-contenido d-flex align-items-center justify-content-between">
+      <input id="nav-toggle" type="checkbox" class="d-none" aria-hidden="true">
+      <label for="nav-toggle" class="hamburger d-lg-none">☰</label>
+      <div class="logo"><a href="../index.html"><img src="../assets/logo-atenea.png" alt="Nomad logo" width="140"></a></div>
+      <nav class="site-nav" role="navigation" aria-label="Principal">
+        <ul class="nav-list d-lg-flex list-unstyled mb-0">
+          <li class="mx-2"><a href="../index.html">Inicio</a></li>
+          <li class="mx-2"><a href="../pages/about.html">Sobre</a></li>
+          <li class="mx-2"><a href="../pages/products.html">Productos</a></li>
+          <li class="mx-2"><a href="../pages/gallery.html">Galería</a></li>
+          <li class="mx-2"><a href="../pages/contact.html">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <!-- NAV -->
-    <nav class="nav">
-      <ul class="nav-lista">
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="../pages/products.html">Productos</a></li>
-        <li><a href="../pages/gallery.html">Galería</a></li>
-        <li><a href="../pages/about.html">Sobre la marca</a></li>
-        <li><a href="../pages/contact.html">Contacto</a></li>
-      </ul>
-    </nav>
-
-  </div>
-</header>
-
-  <!-- MAIN -->
-  <main class="container contacto">
-
+  <main class="container mt-5">
     <h1>Contacto</h1>
+    <p>Completa el formulario para solicitar información o encuentra nuestra ubicación en el mapa.</p>
 
-    <div class="contacto-contenido">
-
-      <form class="formulario">
-
-        <div class="fila">
-
-          <div class="campo">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" required>
+    <div class="row mt-3">
+      <div class="col-lg-6 mb-4">
+        <form class="contact-form" action="#" method="post" aria-label="Formulario de contacto">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" id="name" name="name" class="form-control" required>
           </div>
-
-          <div class="campo">
-            <label for="email">Email</label>
-            <input type="email" id="email" required>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-control" required>
           </div>
-
-        </div>
-
-        <div class="campo">
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" required></textarea>
-        </div>
-
-        <fieldset class="consulta">
-          <legend>Tipo de consulta</legend>
-          <label><input type="checkbox"> Producto</label>
-          <label><input type="checkbox"> Pedido personalizado</label>
-        </fieldset>
-
-        <button type="submit">Enviar</button>
-
-      </form>
-
-      <div class="mapa">
-        <iframe
-          src="https://www.google.com/maps/embed"
-          title="Mapa del local"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea id="message" name="message" class="form-control" rows="6" required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Enviar</button>
+        </form>
       </div>
-
+      <div class="col-lg-6 mb-4">
+       
+        <div class="ratio ratio-4x3">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.123456789!2d-58.381559!3d-34.603684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac0e1b1a1%3A0x0!2sBuenos%20Aires!5e0!3m2!1ses!2sar!4v0000000000000" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
     </div>
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2024 Atenea Joyería</p>
-    </div>
-  </footer>
-
+  <footer class="site-footer bg-light mt-5 py-4"><div class="container">© 2024 Atenea Studio</div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
