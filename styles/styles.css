@@ -182,6 +182,21 @@ a {
     margin-left: auto;
   }
 }
+
+/* Cart button hover */
+#cart-btn:hover {
+  background: #c2dc80;
+  border-color: #c2dc80;
+  color: #fff;
+}
+
+/* Add to cart button hover */
+.add-to-cart:hover {
+  background: #c2dc80;
+  border-color: #c2dc80;
+  color: #fff;
+}
+
 /* Carousel responsive sizing (portrait) */
 .carousel {
   width: auto;
