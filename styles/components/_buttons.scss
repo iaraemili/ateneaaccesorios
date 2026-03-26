@@ -2,3 +2,9 @@
 .btn-primary{background:$color-primary;border-color:$color-primary;color:#fff}
 .btn{transition:transform .18s ease,box-shadow .18s}
 .btn:hover{transform:translateY(-3px)}
+
+/* Cart button hover */
+#cart-btn:hover{background:#c2dc80;border-color:#c2dc80;color:#fff}
+
+/* Add to cart button hover */
+.add-to-cart:hover{background:#c2dc80;border-color:#c2dc80;color:#fff}

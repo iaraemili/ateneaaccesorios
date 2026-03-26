@@ -9,3 +9,11 @@
 }
 /* mobile nav dropdown */
 #nav-toggle:checked ~ .site-nav .nav-list{display:flex;flex-direction:column;padding:12px;background:#fff;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+
+/* Navigation link hover (desktop and mobile) */
+.site-nav .nav-list a{color:#000000;transition:color .15s ease}
+.site-nav .nav-list a:hover,.site-nav .nav-list a:focus{color:#c2dc80;text-decoration:none}
+
+/* Cart container */
+.cart-container{position:absolute;top:10px;right:10px;z-index:10}
+@media (max-width: 1023px){.cart-container{position:static;margin-left:auto}}
